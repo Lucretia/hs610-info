@@ -158,3 +158,4 @@ As can be see by the first window, gives us the MCU part number, [GD32F350C8T6](
 * [DataSheet](./docs/GD32F350xx_Datasheet_Rev1.4.pdf)
 * [User Manual](./docs/GD32F3x0_User_Manual_EN_v2.1.pdf)
 * [Firmware Library User Guide](./docs/GD32F3x0_Firmware_Library_User_Guide_Rev1.0.pdf)
+* [GD32 DFU Tool and DFU Drivers](http://www.gd32mcu.com/en/download?kw=dfu&lan=en)
