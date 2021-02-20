@@ -159,3 +159,13 @@ As can be see by the first window, gives us the MCU part number, [GD32F350C8T6](
 * [User Manual](./docs/GD32F3x0_User_Manual_EN_v2.1.pdf)
 * [Firmware Library User Guide](./docs/GD32F3x0_Firmware_Library_User_Guide_Rev1.0.pdf)
 * [GD32 DFU Tool and DFU Drivers](http://www.gd32mcu.com/en/download?kw=dfu&lan=en)
+
+## TODO
+
+So, what's the point of all this? Well, it would be nice to be able to update firmware without a Windows or MAc machine. Yes I can do it in a virtual machine (KVM), and it works, but some people don't and won't.
+
+The issue is this, the firmware isn't distributed with the firmware tool, it's downloaded and from an unknown location. It would be nice to be able to have this location publicly available or even just a link to the DFU binary.
+
+The manufacturer also doesn't want people to reverse engineer their firmware, well, unfortunately, that is beyond their control, people will do it, 1) because they can, 2) because it's a challenge and 3) because at some point the tablet will be unsupported and people will still own one and there may be bugs that need fixing.
+
+Any help in locating the firmware, or being able to download the firmware with open tools from the device will be gratefully received and merged into this repository.
