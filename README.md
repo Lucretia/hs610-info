@@ -160,6 +160,76 @@ As can be see by the first window, gives us the MCU part number, [GD32F350C8T6](
 * [Firmware Library User Guide](./docs/GD32F3x0_Firmware_Library_User_Guide_Rev1.0.pdf)
 * [GD32 DFU Tool and DFU Drivers](http://www.gd32mcu.com/en/download?kw=dfu&lan=en)
 
+## Finding the firmware
+
+I have sniffed the http/s traffic from the firmware application and got a number opf requests sent:
+
+```bash
+POST http://zyz.huion.cn/api/device.php HTTP/1.1
+nReferer: zyz.huion.cn
+Content-Type: application/x-www-form-urlencoded
+Accept: */*
+User-Agent: HuionFirmware
+Host: zyz.huion.cn
+Content-Length: 6
+Pragma: no-cache
+
+id=all
+```
+
+```bash
+GET http://zyz.huion.cn/api/search.php?token= HTTP/1.1
+nReferer: zyz.huion.cn
+Content-Type: application/x-www-form-urlencoded
+Accept: */*
+User-Agent: HuionFirmware
+Host: zyz.huion.cn
+Pragma: no-cache
+```
+
+```bash
+GET http://wx.huion.cn/api/Propelling/getInfo/?region=GB&sys_type=win HTTP/1.1
+nReferer: wx.huion.cn
+Content-Type: application/x-www-form-urlencoded
+Accept: */*
+Host: wx.huion.cn
+Pragma: no-cache
+Cookie: FIFMWARE=8001e659212cd459f063ea7691e0dae7
+```
+
+By sending the following command:
+
+```bash
+$ wget --no-cookies --header "Cookie: FIFMWARE=8001e659212cd459f063ea7691e0dae7" http://zyz.huion.cn/api/search.php?token=
+```
+
+I was able to get a list of firmware binaries with url's for various devices. I have downloaded that file and the gd32-prefix/suffix tools don't recognise the files:
+
+```bash
+$ ~/opt/gd32-dfu-utils/bin/dfu-prefix -c c831532b0621e8ff9510fdc18ebe00d1.bin
+dfu-prefix (dfu-util) 0.9
+
+Copyright 2011-2012 Stefan Schmidt, 2014 Uwe Bonnes
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
+
+dfu-prefix: Invalid DFU suffix signature
+dfu-prefix: A valid DFU suffix will be required in a future dfu-util release!!!
+
+$ ~/opt/gd32-dfu-utils/bin/dfu-suffix -c c831532b0621e8ff9510fdc18ebe00d1.bin
+dfu-suffix (dfu-util) 0.9
+
+Copyright 2011-2012 Stefan Schmidt, 2013-2014 Tormod Volden
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to http://sourceforge.net/p/dfu-util/tickets/
+
+dfu-suffix: Invalid DFU suffix signature
+dfu-suffix: Valid DFU suffix needed
+```
+
+So, it could be an encrypted file, or they have a modified toolset for their devices.
+
+
 ## TODO
 
 So, what's the point of all this? Well, it would be nice to be able to update firmware without a Windows or MAc machine. Yes I can do it in a virtual machine (KVM), and it works, but some people don't and won't.
@@ -168,4 +238,4 @@ The issue is this, the firmware isn't distributed with the firmware tool, it's d
 
 The manufacturer also doesn't want people to reverse engineer their firmware, well, unfortunately, that is beyond their control, people will do it, 1) because they can, 2) because it's a challenge and 3) because at some point the tablet will be unsupported and people will still own one and there may be bugs that need fixing.
 
-Any help in locating the firmware, or being able to download the firmware with open tools from the device will be gratefully received and merged into this repository.
+Any help in writing the firmware with open tools to the device will be gratefully received and merged into this repository.
