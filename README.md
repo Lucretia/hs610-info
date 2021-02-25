@@ -229,6 +229,19 @@ dfu-suffix: Valid DFU suffix needed
 
 So, it could be an encrypted file, or they have a modified toolset for their devices.
 
+### MD5
+
+The JSON file returned from the query above has a 30-digit md5sum hash contained, it misses off the last 2 digits of the hash, i.e.:
+
+```bash
+$ md5sum HS610_HUION_T194_190307.bin
+b552a20d0dab09dcf1dbfafea3ab4b21  HS610_HUION_T194_190307.bin
+b552a20d0dab09dcf1dbfafea3ab4b    # Hash from the JSON file for this binary.
+
+$ md5sum HS610_HUION_T194_191023.bin
+9257fe18bf62426a6c5a412cc74e2bd0  HS610_HUION_T194_191023.bin
+9257fe18bf62426a6c5a412cc74e2b    # Hash from the JSON file for this binary.
+```
 
 ## TODO
 
