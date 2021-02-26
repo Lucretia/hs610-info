@@ -243,6 +243,59 @@ $ md5sum HS610_HUION_T194_191023.bin
 9257fe18bf62426a6c5a412cc74e2b    # Hash from the JSON file for this binary.
 ```
 
+## Libinput data
+
+```bash
+$ sudo libinput list-devices
+event4  - HUION Huion Tablet_HS610 Touch Ring: libinput bug: missing tablet capabilities: pen btn-stylus resolution. Ignoring this device.
+event5  - HUION Huion Tablet_HS610 Dial: libinput bug: missing tablet capabilities: pen btn-stylus resolution. Ignoring this device.
+event1  - HUION Huion Tablet_HS610 Keyboard: libinput bug: missing tablet capabilities: xy pen btn-stylus resolution. Ignoring this device.
+
+# Non-related devices removed.
+
+Device:           HUION Huion Tablet_HS610
+Kernel:           /dev/input/event2
+Group:            7
+Seat:             seat0, default
+Size:             254x159mm
+Capabilities:     tablet
+Tap-to-click:     n/a
+Tap-and-drag:     n/a
+Tap drag lock:    n/a
+Left-handed:      n/a
+Nat.scrolling:    n/a
+Middle emulation: n/a
+Calibration:      n/a
+Scroll methods:   none
+Click methods:    none
+Disable-w-typing: n/a
+Accel profiles:   none
+Rotation:         n/a
+
+Device:           HUION Huion Tablet_HS610 Pad
+Kernel:           /dev/input/event3
+Group:            7
+Seat:             seat0, default
+Capabilities:     tablet-pad
+Tap-to-click:     n/a
+Tap-and-drag:     n/a
+Tap drag lock:    n/a
+Left-handed:      n/a
+Nat.scrolling:    n/a
+Middle emulation: n/a
+Calibration:      n/a
+Scroll methods:   none
+Click methods:    none
+Disable-w-typing: n/a
+Accel profiles:   n/a
+Rotation:         n/a
+Pad:
+	Rings:   0
+	Strips:  0
+	Buttons: 13
+	Mode groups: 1 (1 modes)
+```
+
 ## TODO
 
 So, what's the point of all this? Well, it would be nice to be able to update firmware without a Windows or MAc machine. Yes I can do it in a virtual machine (KVM), and it works, but some people don't and won't.
