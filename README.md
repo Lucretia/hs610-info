@@ -328,3 +328,5 @@ If you want to see if your tablet enters a new mode for flashing, do the followi
 7. Trace networking/USB on Windows or Mac using a tool as you insert the cable into the tablet in case the driver is checking for firmware updates.
 8. Note down any URL's grabbed.
 9. Test these URL's with wget, see above, and see what comes down, add these files to the issue.
+
+I'm interested in anything you can find relating to flashing the ROM or reading from the ROM on the MCU inside the tablet, datasheets of the MCU, etc.
