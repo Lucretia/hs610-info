@@ -310,3 +310,21 @@ Any help in writing the firmware with open tools to the device will be gratefull
 
 * [Touch ring PID only](https://github.com/DIGImend/digimend-kernel-drivers/issues/275#issuecomment-691860908)
 * [HS610 touch ring user-level driver](https://github.com/leiserfg/w2w)
+
+## Contributing
+
+If anyone does this, I'll need to change the name of the repository.
+
+### Your own tablet, other than any already listed
+
+If you want to see if your tablet enters a new mode for flashing, do the following:
+
+1. ```dmesg -Hw``` in a terminal.
+2. Check the site for firmware instructions, if any.
+3. Hold down the buttons one at a time and insert the USB cable, try combinations of buttons.
+4. Note down what dmesg prints if it prints anything.
+5. Create an issue here with those details and I'll create a new page for that tablet.
+6. Find links to the datasheets I can link into a new document.
+7. Trace networking/USB on Windows or Mac using a tool as you insert the cable into the tablet in case the driver is checking for firmware updates.
+8. Note down any URL's grabbed.
+9. Test these URL's with wget, see above, and see what comes down, add these files to the issue.
