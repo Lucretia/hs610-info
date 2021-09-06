@@ -305,3 +305,8 @@ The issue is this, the firmware isn't distributed with the firmware tool, it's d
 The manufacturer also doesn't want people to reverse engineer their firmware, well, unfortunately, that is beyond their control, people will do it, 1) because they can, 2) because it's a challenge and 3) because at some point the tablet will be unsupported and people will still own one and there may be bugs that need fixing.
 
 Any help in writing the firmware with open tools to the device will be gratefully received and merged into this repository.
+
+## Useful Links
+
+* [Touch ring PID only](https://github.com/DIGImend/digimend-kernel-drivers/issues/275#issuecomment-691860908)
+* [HS610 touch ring user-level driver](https://github.com/leiserfg/w2w)
