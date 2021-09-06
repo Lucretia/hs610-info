@@ -162,7 +162,7 @@ As can be see by the first window, gives us the MCU part number, [GD32F350C8T6](
 
 ## Finding the firmware
 
-I have sniffed the http/s traffic from the firmware application and got a number opf requests sent:
+I have sniffed the http/s traffic from the firmware application and got a number of requests sent:
 
 ```bash
 POST http://zyz.huion.cn/api/device.php HTTP/1.1
