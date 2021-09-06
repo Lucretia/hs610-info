@@ -296,11 +296,11 @@ Pad:
 	Mode groups: 1 (1 modes)
 ```
 
-## TODO
+## Notes
 
-So, what's the point of all this? Well, it would be nice to be able to update firmware without a Windows or MAc machine. Yes I can do it in a virtual machine (KVM), and it works, but some people don't and won't.
+So, what's the point of all this? Well, it would be nice to be able to update firmware without a Windows or Mac machine. Yes I can do it in a virtual machine (KVM), and it works, but some people don't and won't.
 
-The issue is this, the firmware isn't distributed with the firmware tool, it's downloaded and from an unknown location. It would be nice to be able to have this location publicly available or even just a link to the DFU binary.
+The issue is this, the firmware isn't distributed with the firmware tool, it's downloaded and from a (now) known location. It would be nice to be able to have this location publicly available or even just a link to the DFU binary.
 
 The manufacturer also doesn't want people to reverse engineer their firmware, well, unfortunately, that is beyond their control, people will do it, 1) because they can, 2) because it's a challenge and 3) because at some point the tablet will be unsupported and people will still own one and there may be bugs that need fixing.
 
