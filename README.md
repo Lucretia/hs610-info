@@ -11,6 +11,8 @@ $ lsusb|grep -i huion
 Bus 001 Device 065: ID 256c:006d HUION Huion Tablet_HS610
 ```
 
+If you have a device with the same VID:PID as above, can you open an issue here with the details of the device?
+
 ## Flashing the firmware on Windows
 
 On flashing the device under a Windows VM, you are prompted to press buttons 1 and 5 on the device as you plug it in, this puts the device into a new mode for flashing.
