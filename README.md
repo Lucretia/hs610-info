@@ -107,7 +107,7 @@ The USB descriptor above shows the DFU version to be 1.1a, which matches that of
 
 ### DFU-Util
 
-As I now know the chip in use her, this sent me looking for information on it, there are many by this company and I originally thought it was a RISC-V, as the dfu-util from [gd32-utils](https://github.com/riscv-mcu/gd32-dfu-utils) shows:
+As I now know the chip in use here, this sent me looking for information on it, there are many by this company and I originally thought it was a RISC-V, as the dfu-util from [gd32-utils](https://github.com/riscv-mcu/gd32-dfu-utils) shows:
 
 ```bash
 $ ~/opt/gd32-dfu-utils/bin/dfu-util -l
@@ -332,3 +332,8 @@ If you want to see if your tablet enters a new mode for flashing, do the followi
 9. Test these URL's with wget, see above, and see what comes down, add these files to the issue.
 
 I'm interested in anything you can find relating to flashing the ROM or reading from the ROM on the MCU inside the tablet, datasheets of the MCU, etc.
+
+## Links
+
+* [FrOSCon DIGImend presentation](https://youtu.be/Qi73_QFSlpo)
+*
