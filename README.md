@@ -333,6 +333,29 @@ If you want to see if your tablet enters a new mode for flashing, do the followi
 
 I'm interested in anything you can find relating to flashing the ROM or reading from the ROM on the MCU inside the tablet, datasheets of the MCU, etc.
 
+## Update as of 24/01/2025
+
+* The driver situation is a mess on both X11 and Wayland, now using Wayland even though there are issues.
+* There is an official driver from Huion, I don't know if it sits on top of the uclogic one.
+  * The graphics mess up on the tablet mapping.
+  * It's not HDPI aware, half the screen = full tablet.
+  * It just doesn't work.
+* With both drivers, it is flaky as to whether it even works or not. I've had it not work, then work, then stop working
+  completely until reboot.
+
+We need new drivers.
+
+Wayland uses libinput.
+
+#freedesktop has pointed me at [udev-hid-bpf](https://libevdev.pages.freedesktop.org/udev-hid-bpf) which is a plugin to
+[ebpf](https://ebpf.io)?
+
+There is a guy using OpenTabletDriver with Wayland. This does support the HS610, apparently, but no wheel support yet. They
+also have a debugging tool.
+
+[Here](https://gist.github.com/Lucretia/a0948f9cdb4ee2c11d6ef901236b5d9c) is the dump from the debugging tool for the
+ring button, i.e. button 13, and the ring in both directions.
+
 ## Links
 
 * [FrOSCon DIGImend presentation](https://youtu.be/Qi73_QFSlpo)
