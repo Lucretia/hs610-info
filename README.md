@@ -356,6 +356,9 @@ also have a debugging tool.
 [Here](https://gist.github.com/Lucretia/a0948f9cdb4ee2c11d6ef901236b5d9c) is the dump from the debugging tool for the
 ring button, i.e. button 13, and the ring in both directions.
 
+I found that the hub my table was plugged into caused OpenTabletDriver to stall starting, using the front USB of the
+computer works fine, must be a power problem. This also could be why the other drivers were failing. Need to test.
+
 ## Links
 
 * [FrOSCon DIGImend presentation](https://youtu.be/Qi73_QFSlpo)
